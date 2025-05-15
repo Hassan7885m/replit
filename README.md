@@ -1,4 +1,4 @@
-# Welcome to your My Name is Hassan
+# Hassan Mallah
 
 ## Project info
 
