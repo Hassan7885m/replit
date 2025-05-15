@@ -1,0 +1,39 @@
+modules = ["nodejs-20"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Git Init"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "git-project-check"
+
+[[workflows.workflow]]
+name = "Git Init"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git init && echo \"Git repository initialized successfully!\" && ls -la"
+
+[[workflows.workflow]]
+name = "git-project-check"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "git init && git status"
+
+[deployment]
+run = ["sh", "-c", "git init && echo \"Git repository initialized successfully!\" && ls -la"]
