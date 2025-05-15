@@ -1,6 +1,6 @@
-# Welcome to your Lovable project
+# Welcome to your Lovable projec
 
-## Project info
+## Replit
 
 **URL**: https://lovable.dev/projects/b2a53f9a-1497-43c8-bd88-3da1782f8d84
 
